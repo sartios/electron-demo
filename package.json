@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "postinstall": "install-app-deps",
-    "clean": "rimraf out",
+    "clean": "rimraf app/css && rimraf app/js && rimraf app/partials && rimraf app/index.*",
     "start": "npm install && electron ./app",
     "compile": "rimraf dist",
     "pack": "npm run compile && build --dir",
