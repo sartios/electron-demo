@@ -1,19 +1,13 @@
 {
   "name": "electron-demo",
+  "productName": "My Electron Demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "../src/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sartios/electron-demo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sartios/electron-demo/issues"
-  },
+  "description": "My electron demo app",
   "homepage": "https://github.com/sartios/electron-demo#readme",
+  "author": "Savramis Sartios",
+  "license": "ISC",
+  "private": true,
+  "main": "../src/index.js",
   "dependencies": {
   }
 }
