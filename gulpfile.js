@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify');
 
-gulp.task('styles', function(){
+gulp.task('style', function(){
     gulp.src(['src/css/*.css'])
         .pipe(concat('style.css'))
         .pipe(minifyCSS())
@@ -30,4 +30,18 @@ gulp.task('js', function(){
     .pipe(uglify())
     .pipe(gulp.dest('app/js/'))
     .pipe(gulp.dest('src/js/'));
+});
+
+gulp.task('html', function(){
+    gulp.src('src/partials/**/*')
+        .pipe(changed('app/partials'))
+        .pipe(gulp.dest('app/partials'));
+
+    gulp.src(['src/index.html', 'src/index.js'])
+        .pipe(changed('app'))
+        .pipe(gulp.dest('app'));
+});
+
+gulp.task('default', ['html', 'style', 'js'], function(){
+
 });
