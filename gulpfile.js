@@ -18,10 +18,10 @@ gulp.task('js', function(){
         angularRoute = 'bower_components/angular-route/angular-route.min.js',
         jQuery = 'bower_components/jquery/dist/jquery.min.js',
         bootstrap = 'bower_components/bootstrap/dist/js/bootstrap.min.js';
-    gulp.src(angular).pipe(gulp.dest('app/js/angular/')).pipe(gulp.dest('src/js/angular/'));
-    gulp.src(angularRoute).pipe(gulp.dest('app/js/angular/')).pipe(gulp.dest('src/js/angular/'));
-    gulp.src(jQuery).pipe(gulp.dest('app/js/jquery/')).pipe(gulp.dest('src/js/jquery/'));
-    gulp.src(bootstrap).pipe(gulp.dest('app/js/bootstrap/')).pipe(gulp.dest('src/js/bootstrap/'));
+    gulp.src(angular).pipe(gulp.dest('app/js/lib/angular/')).pipe(gulp.dest('src/js/lib/angular/'));
+    gulp.src(angularRoute).pipe(gulp.dest('app/js/lib/angular/')).pipe(gulp.dest('src/js/lib/angular/'));
+    gulp.src(jQuery).pipe(gulp.dest('app/js/lib/jquery/')).pipe(gulp.dest('src/js/lib/jquery/'));
+    gulp.src(bootstrap).pipe(gulp.dest('app/js/lib/bootstrap/')).pipe(gulp.dest('src/js/lib/bootstrap/'));
 
     gulp.src([
         'src/js/app.js'
