@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    changed = require('gulp-changed'),
     imagemin = require('gulp-imagemin'),
     autoprefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
@@ -34,11 +33,9 @@ gulp.task('js', function(){
 
 gulp.task('html', function(){
     gulp.src('src/partials/**/*')
-        .pipe(changed('app/partials'))
         .pipe(gulp.dest('app/partials'));
 
     gulp.src(['src/index.html', 'src/index.js'])
-        .pipe(changed('app'))
         .pipe(gulp.dest('app'));
 });
 
